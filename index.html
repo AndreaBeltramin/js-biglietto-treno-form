@@ -31,12 +31,7 @@
 			<div class="col-4">
 				<div class="mb-3">
 					<label for="nameUser" class="form-label">Nome e cognome</label>
-					<input
-						type="text"
-						class="form-control"
-						id="nameUser"
-						value="John Snow"
-					/>
+					<input type="text" class="form-control" id="nameUser" />
 				</div>
 			</div>
 			<div class="col-4">
@@ -52,14 +47,17 @@
 					class="form-select"
 					aria-label="Default select example"
 				>
-					<option selected>Scegli l'età</option>
-					<option value="1">Maggiorenne</option>
-					<option value="2">Minorenne</option>
-					<option value="3">Altro</option>
+					<option id="maggiorenne" value="maggiorenne">Maggiorenne</option>
+					<option id="minorenne" value="minorenne">Minorenne</option>
+					<option id="altro" value="altro">Altro</option>
 				</select>
 			</div>
+			<div class="col-12">
+				<button id="generaBiglietto" type="button" class="btn btn-primary">
+					Genera biglietto
+				</button>
+			</div>
 		</div>
-		<button type="button" class="btn btn-primary mx-5">Genera biglietto</button>
 		<!--BOOTSTRAP JS-->
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

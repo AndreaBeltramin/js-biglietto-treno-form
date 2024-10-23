@@ -1,4 +1,43 @@
+const inputNameUser = document.getElementById((id = "nameUser"));
+const inputkmToDo = document.getElementById((id = "kmToDo"));
+const inputAgeSelect = document.getElementById((id = "ageSelect"));
+const inputGeneraBigliettoButton = document.getElementById(
+	(id = "generaBiglietto")
+);
+
+const nameUserEl = document.getElementById("nameUser");
+const nameUserValue = prompt("Come ti chiami?");
+console.log(nameUserValue);
+nameUserEl.setAttribute("value", nameUserEl);
+
+const kmToDoEl = document.getElementById("kmToDo");
+const kmToDoValueEl = parseInt(prompt("Quanti km percorrerai?"));
+console.log(kmToDoValueEl);
+kmToDoEl.setAttribute("value", kmToDoValueEl);
+
+let ageUserEl = document.getElementById("ageSelect");
+const ageUserValueEl = parseInt(prompt("Quanti anni hai?"));
+console.log(ageUserValueEl);
+ageUserEl.setAttribute("value", ageUserValueEl);
+
+const maggiorenneUser = document.getElementById("maggiorenne");
+const minorenneUser = document.getElementById("minorenne");
+const otherAge = document.getElementById("altro");
+
+if (ageUserEl < 18) {
+	ageUserEl === minorenneUser;
+}
+
+const executeButton = document.getElementById("generaBiglietto");
+
+/*executeButton.addEventListener("click", () => {
+	const kmToDoValue = parseInt(prompt("Quanti km percorrerai?"));
+	console.log(kmToDoValue);
+});
+*/
+
 /*
+
 //!RACCOLTA DATI
 //chiedi (number) numero km
 const userDistance = parseInt(prompt("Quanti km percorrerai?"));
