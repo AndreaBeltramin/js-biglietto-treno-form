@@ -6,9 +6,9 @@ const inputGeneraBigliettoButton = document.getElementById(
 );
 
 const nameUserEl = document.getElementById("nameUser");
-const nameUserValue = prompt("Come ti chiami?");
-console.log(nameUserValue);
-nameUserEl.setAttribute("value", nameUserEl);
+const nameUserValueEl = prompt("Come ti chiami?");
+console.log(nameUserValueEl);
+nameUserEl.setAttribute("value", nameUserValueEl);
 
 const kmToDoEl = document.getElementById("kmToDo");
 const kmToDoValueEl = parseInt(prompt("Quanti km percorrerai?"));
