@@ -27,6 +27,7 @@
 		<title>Biglietto treno</title>
 	</head>
 	<body>
+		<!--CAMPO NOME UTENTE-->
 		<div class="row mt-5 p-5">
 			<div class="col-4">
 				<div class="mb-3">
@@ -34,24 +35,19 @@
 					<input type="text" class="form-control" id="nameUser" />
 				</div>
 			</div>
+			<!--CAMPO KM DA FARE-->
 			<div class="col-4">
 				<div class="mb-3">
 					<label for="kmToDo" class="form-label">Km da percorrere</label>
 					<input type="number" min="1" class="form-control" id="kmToDo" />
 				</div>
 			</div>
+			<!--CAMPO ETA' UTENTE-->
 			<div class="col-4">
 				<label for="ageSelect" class="form-label">Fascia d'età </label>
-				<select
-					id="ageSelect"
-					class="form-select"
-					aria-label="Default select example"
-				>
-					<option id="maggiorenne" value="maggiorenne">Maggiorenne</option>
-					<option id="minorenne" value="minorenne">Minorenne</option>
-					<option id="altro" value="altro">Altro</option>
-				</select>
+				<select id="ageSelect" class="form-select"></select>
 			</div>
+			<!--CAMPO BOTTONE GENERA BIGLIETTO-->
 			<div class="col-12">
 				<button id="generaBiglietto" type="button" class="btn btn-primary">
 					Genera biglietto

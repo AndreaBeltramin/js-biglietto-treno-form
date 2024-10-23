@@ -4,7 +4,7 @@ const inputAgeSelect = document.getElementById((id = "ageSelect"));
 const inputGeneraBigliettoButton = document.getElementById(
 	(id = "generaBiglietto")
 );
-
+/*
 const nameUserEl = document.getElementById("nameUser");
 const nameUserValueEl = prompt("Come ti chiami?");
 console.log(nameUserValueEl);
@@ -14,18 +14,17 @@ const kmToDoEl = document.getElementById("kmToDo");
 const kmToDoValueEl = parseInt(prompt("Quanti km percorrerai?"));
 console.log(kmToDoValueEl);
 kmToDoEl.setAttribute("value", kmToDoValueEl);
+*/
 
 let ageUserEl = document.getElementById("ageSelect");
-const ageUserValueEl = parseInt(prompt("Quanti anni hai?"));
+let ageUserValueEl = parseInt(prompt("Quanti anni hai?"));
 console.log(ageUserValueEl);
 ageUserEl.setAttribute("value", ageUserValueEl);
 
-const maggiorenneUser = document.getElementById("maggiorenne");
-const minorenneUser = document.getElementById("minorenne");
-const otherAge = document.getElementById("altro");
-
-if (ageUserEl < 18) {
-	ageUserEl === minorenneUser;
+if (ageUserValueEl < 18) {
+	ageUserEl.setAttribute("value", "minorenne");
+} else if (ageUserEl > 18) {
+	ageUserEl.setAttribute("value", "maggiorenne");
 }
 
 const executeButton = document.getElementById("generaBiglietto");
