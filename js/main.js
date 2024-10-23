@@ -1,16 +1,16 @@
 const inputNameUser = document.getElementById("nameUser");
 const nameUserValueEl = prompt("Come ti chiami?");
-console.log(nameUserValueEl);
+console.log("name: ", nameUserValueEl);
 inputNameUser.setAttribute("value", nameUserValueEl);
 
 const inputkmToDo = document.getElementById("kmToDo");
 const kmToDoValueEl = parseInt(prompt("Quanti km percorrerai?"));
-console.log(kmToDoValueEl);
+console.log("km: ", kmToDoValueEl);
 inputkmToDo.setAttribute("value", kmToDoValueEl);
 
 const inputAgeSelect = document.getElementById("ageSelect");
 let ageUserValueEl = parseInt(prompt("Quanti anni hai?"));
-console.log(ageUserValueEl);
+console.log("età: ", ageUserValueEl);
 
 if (ageUserValueEl < 18) {
 	inputAgeSelect.value = "minorenne";
@@ -27,7 +27,6 @@ executeButton.addEventListener("click", () => {
 	const nameUser = inputNameUser.value;
 	const kmToDo = inputkmToDo.value;
 	const ageSelect = inputAgeSelect.value;
-	console.log(nameUser, kmToDo, ageSelect);
 
 	let price = 0;
 	let discountEur = 0;
@@ -39,8 +38,6 @@ executeButton.addEventListener("click", () => {
 
 	//calcolo il prezzo
 	price = kmToDo * pricePerKm;
-	//setta il messaggio di output prezzo pieno
-	outputMessage = `Il prezzo del biglietto è di € ${price.toFixed(2)}`;
 
 	//SE l'età del passeggero è <18
 	if (ageSelect === "minorenne") {
@@ -52,6 +49,7 @@ executeButton.addEventListener("click", () => {
 In quanto Under 18 hai diritto ad uno sconto del ${discountPercUnder18}%. 
 Lo sconto è pari ad un ammontare di € ${discountEur.toFixed(2)}.
 Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
+		console.log(outputMessage);
 	}
 
 	//SE il passeggero è >65
@@ -64,6 +62,7 @@ Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
 In quanto Over 65 hai diritto ad uno sconto del ${discountPercOver65}%. 
 Lo sconto è pari ad un ammontare di € ${discountEur.toFixed(2)}.
 Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
+		console.log(outputMessage);
 	}
 
 	//calcolo il prezzo scontato SE l'età è valida E non è <18 E  >65
@@ -73,6 +72,7 @@ Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
 			"Non hai diritto a nessuno sconto, dovrai pagare " +
 			finalPrice.toFixed(2) +
 			" €";
+		console.log(outputMessage);
 	}
 
 	//!OUTPUT
