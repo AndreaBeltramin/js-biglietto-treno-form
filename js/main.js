@@ -1,35 +1,56 @@
-const inputNameUser = document.getElementById((id = "nameUser"));
-const inputkmToDo = document.getElementById((id = "kmToDo"));
-const inputAgeSelect = document.getElementById((id = "ageSelect"));
-const inputGeneraBigliettoButton = document.getElementById(
-	(id = "generaBiglietto")
-);
-/*
-const nameUserEl = document.getElementById("nameUser");
+const inputNameUser = document.getElementById("nameUser");
 const nameUserValueEl = prompt("Come ti chiami?");
 console.log(nameUserValueEl);
-nameUserEl.setAttribute("value", nameUserValueEl);
+inputNameUser.setAttribute("value", nameUserValueEl);
 
-const kmToDoEl = document.getElementById("kmToDo");
+const inputkmToDo = document.getElementById("kmToDo");
 const kmToDoValueEl = parseInt(prompt("Quanti km percorrerai?"));
 console.log(kmToDoValueEl);
-kmToDoEl.setAttribute("value", kmToDoValueEl);
+inputkmToDo.setAttribute("value", kmToDoValueEl);
 
-let ageUserEl = document.getElementById("ageSelect");
+const inputAgeSelect = document.getElementById("ageSelect");
 let ageUserValueEl = parseInt(prompt("Quanti anni hai?"));
 console.log(ageUserValueEl);
 
 if (ageUserValueEl < 18) {
-	ageUserEl.value = "minorenne";
+	inputAgeSelect.value = "minorenne";
 } else {
-	ageUserEl.value = "maggiorenne";
+	inputAgeSelect.value = "maggiorenne";
 }
-*/
+
 const executeButton = document.getElementById("generaBiglietto");
+const outputCard = document.getElementById("output-card");
 
 executeButton.addEventListener("click", () => {
+	const nameUser = inputNameUser.value;
+	const kmToDo = inputkmToDo.value;
+	const ageSelect = inputAgeSelect.value;
+
 	const ticketCard = `
+    <div class="p-5">
+        <table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Nome passeggero</th>
+					<th scope="col">Offerta</th>
+					<th scope="col">Carrozza</th>
+					<th scope="col">Codice cp</th>
+					<th scope="col">Costo biglietto</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>${nameUser}</th>
+					<td>biglietto standard</td>
+					<td>5</td>
+					<td>39582820</td>
+					<td>2.10€</td>
+				</tr>
+			</tbody>
+		</table>
+    </div>
     `;
+	outputCard.innerHTML = ticketCard;
 });
 
 /*

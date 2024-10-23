@@ -32,20 +32,26 @@
 			<div class="col-4">
 				<div class="mb-3">
 					<label for="nameUser" class="form-label">Nome e cognome</label>
-					<input type="text" class="form-control" id="nameUser" />
+					<input type="text" class="form-control" id="nameUser" required />
 				</div>
 			</div>
 			<!--CAMPO KM DA FARE-->
 			<div class="col-4">
 				<div class="mb-3">
 					<label for="kmToDo" class="form-label">Km da percorrere</label>
-					<input type="number" min="1" class="form-control" id="kmToDo" />
+					<input
+						type="number"
+						min="1"
+						class="form-control"
+						id="kmToDo"
+						required
+					/>
 				</div>
 			</div>
 			<!--CAMPO ETA' UTENTE-->
 			<div class="col-4">
 				<label for="ageSelect" class="form-label">Fascia d'età </label>
-				<select id="ageSelect" class="form-select">
+				<select id="ageSelect" class="form-select" required>
 					<option id="maggiorenne" value="maggiorenne">Maggiorenne</option>
 					<option id="minorenne" value="minorenne">Minorenne</option>
 				</select>
@@ -58,38 +64,31 @@
 			</div>
 		</div>
 		<!--CARD BIGLIETTO-->
-		<div class="row">
-			<div class="col-2">
-				<div class="row">
-					<div class="col-12">Nome passeggero</div>
-					<div class="col-12">jon snow</div>
-				</div>
+		<div id="output-card">
+			<!--
+			<div class="p-5"> 
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">nome passeggero</th>
+							<th scope="col">offerta</th>
+							<th scope="col">carrozza</th>
+							<th scope="col">codice cp</th>
+							<th scope="col">costo biglietto</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>john snow</th>
+							<td>biglietto standard</td>
+							<td>5</td>
+							<td>39582820</td>
+							<td>2.10€</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
-			<div class="col-2">
-				<div class="row">
-					<div class="col-12">offerta</div>
-					<div class="col-12">biglietto standard</div>
-				</div>
-			</div>
-			<div class="col-2">
-				<div class="row">
-					<div class="col-12">carrozza</div>
-					<div class="col-12">5</div>
-				</div>
-			</div>
-			<div class="col-2">
-				<div class="row">
-					<div class="col-12">codice cp</div>
-					<div class="col-12">92039291</div>
-				</div>
-			</div>
-			<div class="col-2">
-				<div class="row">
-					<div class="col-12">costo biglietto</div>
-					<div class="col-12">2.10€</div>
-				</div>
-			</div>
-		</div>
+			-->
 
 		<!--BOOTSTRAP JS-->
 		<script
