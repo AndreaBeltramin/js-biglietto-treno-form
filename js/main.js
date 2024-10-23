@@ -14,26 +14,23 @@ const kmToDoEl = document.getElementById("kmToDo");
 const kmToDoValueEl = parseInt(prompt("Quanti km percorrerai?"));
 console.log(kmToDoValueEl);
 kmToDoEl.setAttribute("value", kmToDoValueEl);
-*/
 
 let ageUserEl = document.getElementById("ageSelect");
 let ageUserValueEl = parseInt(prompt("Quanti anni hai?"));
 console.log(ageUserValueEl);
-ageUserEl.setAttribute("value", ageUserValueEl);
 
 if (ageUserValueEl < 18) {
-	ageUserEl.setAttribute("value", "minorenne");
-} else if (ageUserEl > 18) {
-	ageUserEl.setAttribute("value", "maggiorenne");
+	ageUserEl.value = "minorenne";
+} else {
+	ageUserEl.value = "maggiorenne";
 }
-
+*/
 const executeButton = document.getElementById("generaBiglietto");
 
-/*executeButton.addEventListener("click", () => {
-	const kmToDoValue = parseInt(prompt("Quanti km percorrerai?"));
-	console.log(kmToDoValue);
+executeButton.addEventListener("click", () => {
+	const ticketCard = `
+    `;
 });
-*/
 
 /*
 
