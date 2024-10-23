@@ -32,7 +32,7 @@
 			<div class="col-4">
 				<div class="mb-3">
 					<label for="nameUser" class="form-label">Nome e cognome</label>
-					<input type="text" class="form-control" id="nameUser" required />
+					<input type="text" class="form-control" id="nameUser"  />
 				</div>
 			</div>
 			<!--CAMPO KM DA FARE-->
@@ -44,16 +44,17 @@
 						min="1"
 						class="form-control"
 						id="kmToDo"
-						required
+						
 					/>
 				</div>
 			</div>
 			<!--CAMPO ETA' UTENTE-->
 			<div class="col-4">
 				<label for="ageSelect" class="form-label">Fascia d'età </label>
-				<select id="ageSelect" class="form-select" required>
-					<option id="maggiorenne" value="maggiorenne">Maggiorenne</option>
-					<option id="minorenne" value="minorenne">Minorenne</option>
+				<select id="ageSelect" class="form-select" >
+					<option  value="minorenne">Minorenne</option>
+					<option  value="maggiorenne">Maggiorenne</option>
+					<option  value="over65">Over 65</option>
 				</select>
 			</div>
 			<!--CAMPO BOTTONE GENERA BIGLIETTO-->
