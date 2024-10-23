@@ -53,6 +53,7 @@ In quanto Under 18 hai diritto ad uno sconto del ${discountPercUnder18}%.
 Lo sconto è pari ad un ammontare di € ${finalPrice.toFixed(2)}.
 Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
 	}
+
 	//SE il passeggero è >65
 	else if (ageSelect === "over65") {
 		//calcola lo sconto over65
@@ -64,6 +65,7 @@ In quanto Over 65 hai diritto ad uno sconto del ${discountPercOver65}%.
 Lo sconto è pari ad un ammontare di € ${finalPrice.toFixed(2)}.
 Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
 	}
+
 	//calcolo il prezzo scontato SE l'età è valida E non è <18 E  >65
 	else if (ageSelect === "maggiorenne") {
 		finalPrice = kmToDo * pricePerKm;
@@ -92,7 +94,7 @@ Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
 			<tbody>
 				<tr>
 					<th>${nameUser}</th>
-					<td>biglietto standard</td>
+					<td id="offerta">biglietto standard</td>
 					<td>5</td>
 					<td>39582820</td>
 					<td>${finalPrice.toFixed(2)} €</td>
@@ -102,4 +104,15 @@ Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
     </div>
     `;
 	outputCard.innerHTML = ticketCard;
+	const offerta = document.getElementById("offerta");
+	console.log(offerta);
+
+	if (ageSelect === "minorenne") {
+		offerta.innerHTML = "offerta ridotta";
+	}
+
+	//SE il passeggero è >65
+	else if (ageSelect === "over65") {
+		offerta.innerHTML = "offerta premium";
+	}
 });
