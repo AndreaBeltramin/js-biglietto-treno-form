@@ -50,7 +50,7 @@ executeButton.addEventListener("click", () => {
 		//setto messaggio di output sconto per i minorenni
 		outputMessage += `
 In quanto Under 18 hai diritto ad uno sconto del ${discountPercUnder18}%. 
-Lo sconto è pari ad un ammontare di € ${finalPrice.toFixed(2)}.
+Lo sconto è pari ad un ammontare di € ${discountEur.toFixed(2)}.
 Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
 	}
 
@@ -62,7 +62,7 @@ Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
 		//setto messaggio di output sconto per over65
 		outputMessage += `
 In quanto Over 65 hai diritto ad uno sconto del ${discountPercOver65}%. 
-Lo sconto è pari ad un ammontare di € ${finalPrice.toFixed(2)}.
+Lo sconto è pari ad un ammontare di € ${discountEur.toFixed(2)}.
 Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
 	}
 
@@ -105,7 +105,6 @@ Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
     `;
 	outputCard.innerHTML = ticketCard;
 	const offerta = document.getElementById("offerta");
-	console.log(offerta);
 
 	if (ageSelect === "minorenne") {
 		offerta.innerHTML = "offerta ridotta";
