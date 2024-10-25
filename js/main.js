@@ -1,14 +1,14 @@
-const inputNameUser = document.getElementById("nameUser");
-const nameUserValueEl = prompt("Come ti chiami?");
+let inputNameUser = document.getElementById("nameUser");
+let nameUserValueEl = prompt("Come ti chiami?");
 console.log("name: ", nameUserValueEl);
 inputNameUser.setAttribute("value", nameUserValueEl);
 
-const inputkmToDo = document.getElementById("kmToDo");
-const kmToDoValueEl = parseInt(prompt("Quanti km percorrerai?"));
+let inputkmToDo = document.getElementById("kmToDo");
+let kmToDoValueEl = parseInt(prompt("Quanti km percorrerai?"));
 console.log("km: ", kmToDoValueEl);
 inputkmToDo.setAttribute("value", kmToDoValueEl);
 
-const inputAgeSelect = document.getElementById("ageSelect");
+let inputAgeSelect = document.getElementById("ageSelect");
 let ageUserValueEl = parseInt(prompt("Quanti anni hai?"));
 console.log("età: ", ageUserValueEl);
 
@@ -104,8 +104,10 @@ Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
     </div>
     `;
 	outputCard.innerHTML = ticketCard;
+
 	const offerta = document.getElementById("offerta");
 
+	//SE il passeggero è minorenne
 	if (ageSelect === "minorenne") {
 		offerta.innerHTML = "offerta ridotta";
 	}
@@ -114,4 +116,15 @@ Il prezzo finale è pari a € ${finalPrice.toFixed(2)}.`;
 	else if (ageSelect === "over65") {
 		offerta.innerHTML = "offerta premium";
 	}
+});
+
+const annullaButton = document.getElementById("annulla");
+
+annullaButton.addEventListener("click", () => {
+	//display none ticket
+	outputCard.classList = "d-none";
+
+	inputNameUser.value = "";
+	inputkmToDo.value = "";
+	inputAgeSelect.value = "minorenne";
 });
